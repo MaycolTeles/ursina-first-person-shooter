@@ -2,22 +2,15 @@
 Module to run the application.
 """
 
-from ursina import Ursina
-
-from src.player.player import Player
-from src.world.world import World
+from src.game import Game
 
 
 def main() -> None:
     """
     Main function to run the application.
     """
-    app = Ursina()
-
-    player = Player()
-    world = World()
-
-    app.run()
+    game = Game()
+    game.start()
 
 
 if __name__ == "__main__":

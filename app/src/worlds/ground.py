@@ -9,6 +9,7 @@ class Ground(Entity):
     """
     Class to represent the Ground.
     """
+    WORLD_SIZE = 100
 
     def __init__(self) -> None:
         """
@@ -23,7 +24,7 @@ class Ground(Entity):
         ground_attributes = {
             "model": "plane",
             "collider": "box",
-            "scale": 30,
+            "scale": self.WORLD_SIZE,
             "texture": "grass",
             "texture_scale": (4,4)
         }

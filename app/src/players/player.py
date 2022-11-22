@@ -5,7 +5,7 @@ Module containing the "Player" class.
 from ursina import BoxCollider, Vec3, color, held_keys
 from ursina.prefabs.first_person_controller import FirstPersonController
 
-from ..guns.gun import Gun
+from src.guns.gun import Gun
 
 
 class Player(FirstPersonController):
@@ -17,7 +17,7 @@ class Player(FirstPersonController):
         """
         Method to update the player.
 
-        This method is called on each frame.
+        This method is executed on each frame.
         """
         super().update()
 
@@ -56,4 +56,4 @@ class Player(FirstPersonController):
         """
         Private Method to set the player gun.
         """
-        self.gun = Gun()
+        self.gun = Gun(self)
